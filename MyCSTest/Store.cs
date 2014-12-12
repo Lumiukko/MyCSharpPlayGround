@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace MyCSTest
 {
     public class Store
@@ -12,10 +7,26 @@ namespace MyCSTest
         public string Name { get; private set; }
         public string Chain { get; private set; }
         public string Address { get; private set; }
+        public GeoLocation Location { get; private set; }
 
         public Store(string name)
         {
             Name = name;
+        }
+
+        public Store(string name, string chain, string address)
+        {
+            Name = name;
+            Chain = chain;
+            Address = address;
+        }
+
+        public Store(string name, string chain, string address, GeoLocation location)
+        {
+            Name = name;
+            Chain = chain;
+            Address = address;
+            Location = location;
         }
 
         public override string ToString()

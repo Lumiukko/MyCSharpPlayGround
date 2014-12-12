@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MyCSTest
 {
@@ -24,13 +13,32 @@ namespace MyCSTest
         {
             InitializeComponent();
 
-            Brand bNestle = new Brand("Nescafé", "Nestlé");
+            List<ProductPrice> prices = new List<ProductPrice>();
+
+            // This data will be received from a database in the future...
+
+            Brand b0 = new Brand("Nescafé", "Nestlé");
+            Brand b1 = new Brand("Milka", "Mondelez");
+            Brand b2 = new Brand("Club-Mate", "Loscher");
 
 
+            GeoLocation gl0 = new GeoLocation(55.686968, 12.490976);
+            Store s0 = new Store("Føtex, Vanløse", "Føtex", "Jernbane Allé 44, 2720 Vanløse, Denmark", gl0);
 
-            Product pNCO = new Product("Nescafé Original", bNestle, 7613032872731, new MeasuringUnit(MeasuringUnitType.Gram), 100);
+            Store s1 = new Store("Netto, Vanløse", "Netto", "Jernbane Allé 19, 2720 Vanløse, Denmark");
+            Store s2 = new Store("Døgn Netto, Vanløse (1)", "Døgn Netto", "Jernbane Allé 54, 2720 Vanløse, Denmark");
+            Store s3 = new Store("Døgn Netto, Vanløse (2)", "Døgn Netto", "Jydeholmen 53, 2720 Vanløse, Denmark");
 
-            LogBox.AppendText(pNCO.ToString());
+            Product p0 = new Product("Nescafé Original", b0, 7613032872731, new MeasuringUnit(MeasuringUnitType.Gram), 100);
+            Product p1 = new Product("Milka Weihnachtsmischung", b1, 7622300199227, new MeasuringUnit(MeasuringUnitType.Gram), 175);
+            Product p2 = new Product("Club-Mate, original, groß", b2, 4029764001807, new MeasuringUnit(MeasuringUnitType.Milliliter), 500);
+
+            
+            prices.Add(new ProductPrice(p0, s0, 80, new System.DateTime(2014, 12, 12, 21, 13, 55)));
+
+            LogList.ItemsSource = prices;
+
+            LogBox.AppendText("Init finished.");
 
         }
     }
