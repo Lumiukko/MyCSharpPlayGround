@@ -19,7 +19,7 @@ namespace MyCSTest
 
         public override string ToString()
         {
-            return Name + " © " + Manufacturer;
+            return string.Format("{0} © {1}", Name, Manufacturer);
         }
 
     }

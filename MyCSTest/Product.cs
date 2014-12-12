@@ -25,7 +25,7 @@ namespace MyCSTest
 
         public override string ToString()
         {
-            return "[" + Code + "] " + Name + " (" + Brand.ToString() + "), " + Amount + Unit.ToString();
+            return string.Format("[{0}] {1} ({2}), {3d}{4}", Code, Name, Brand.ToString(), Amount, Unit.ToString());
         }
 
 

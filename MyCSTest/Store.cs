@@ -20,7 +20,7 @@ namespace MyCSTest
 
         public override string ToString()
         {
-            return Name + " (" + Chain + ")" + (!Address.Equals("") ? ", " + Address : "");
+            return string.Format("{0} ({1}){2}", Name, Chain, (!Address.Equals(string.Empty) ? ", " + Address : ""));
         }
 
     }
