@@ -25,7 +25,7 @@ namespace MyCSTest
                 case MeasuringUnitType.Milliliter: return "ml";
                 case MeasuringUnitType.Deciliter:  return "dl";
                 case MeasuringUnitType.Ton:        return "t";
-                default:                            return "";
+                default:                           return "";
             }
         }
     }
