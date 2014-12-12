@@ -28,7 +28,7 @@ namespace MyCSTest
 
 
 
-            Product pNCO = new Product("Nescafé Original", bNestle, 7613032872731, new MeasuringUnit(MeasuringUnitTypes.Gram), 100);
+            Product pNCO = new Product("Nescafé Original", bNestle, 7613032872731, new MeasuringUnit(MeasuringUnitType.Gram), 100);
 
             LogBox.AppendText(pNCO.ToString());
 

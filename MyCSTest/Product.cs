@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyCSTest
 {
-    class Product
+    public class Product
     {
         public string          Name    { get; private set; }
         public Brand           Brand   { get; private set; }
@@ -16,16 +16,16 @@ namespace MyCSTest
 
         public Product(string name, Brand brand, ulong code, MeasuringUnit unit, uint amount)
         {
-            this.Name = name;
-            this.Brand = brand;
-            this.Code = code;
-            this.Unit = unit;
-            this.Amount = amount;
+            Name = name;
+            Brand = brand;
+            Code = code;
+            Unit = unit;
+            Amount = amount;
         }
 
         public override string ToString()
         {
-            return "[" + this.Code + "] " + this.Name + " (" + this.Brand.ToString() + "), " + this.Amount + this.Unit.ToString();
+            return "[" + Code + "] " + Name + " (" + Brand.ToString() + "), " + Amount + Unit.ToString();
         }
 
 

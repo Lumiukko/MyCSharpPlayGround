@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace MyCSTest
 {
-    class MeasuringUnit
+    public class MeasuringUnit
     {
-        public MeasuringUnitTypes Type { get; private set; }
+        public MeasuringUnitType Type { get; private set; }
 
-        public MeasuringUnit(MeasuringUnitTypes type)
+        public MeasuringUnit(MeasuringUnitType type)
         {
-            this.Type = type;
+            Type = type;
         }
 
 
         public override string ToString() {
             switch (this.Type) {
-                case MeasuringUnitTypes.Kilogram:   return "kg";
-                case MeasuringUnitTypes.Gram:       return "g";
-                case MeasuringUnitTypes.Milligram:  return "mg";
-                case MeasuringUnitTypes.Liter:      return "l";
-                case MeasuringUnitTypes.Milliliter: return "ml";
-                case MeasuringUnitTypes.Deciliter:  return "dl";
-                case MeasuringUnitTypes.Ton:        return "t";
+                case MeasuringUnitType.Kilogram:   return "kg";
+                case MeasuringUnitType.Gram:       return "g";
+                case MeasuringUnitType.Milligram:  return "mg";
+                case MeasuringUnitType.Liter:      return "l";
+                case MeasuringUnitType.Milliliter: return "ml";
+                case MeasuringUnitType.Deciliter:  return "dl";
+                case MeasuringUnitType.Ton:        return "t";
                 default:                            return "";
             }
         }

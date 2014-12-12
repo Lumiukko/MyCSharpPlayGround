@@ -1,6 +1,6 @@
 ﻿namespace MyCSTest
 {
-    enum MeasuringUnitTypes
+    public enum MeasuringUnitType
     {
         Piece,
         Liter, Deciliter, Milliliter,
